@@ -1,0 +1,2900 @@
+=== Content from https://docs.lytics.com/docs/data-management ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Data Management
+
+Welcome to the Data Management section, where we will explore the various tools and techniques available within the Lytics platform for managing and organizing your customer data. This section covers how to ensure data accuracy and completeness, including data validation, deduplication, and transformation. Whether you are a data analyst, developer, or system administrator, this section will provide you with the essential knowledge needed to manage your customer data and gain valuable insights into customer behavior and preferences.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/lytics-integration-options ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Lytics Integration Options
+
+Lytics Integration Options
+
+If you don’t see your ads or marketing tool in our integrations list we offer the following options to connect with other platforms. With our Integration Options we enable flexibility across the various channels where your data exists and tools to build customized integrations. Lytics Integration Options include:
+
+Read on for details on each option. If you have questions about any of these options or would like to further explore an integration with a specific platform reach out to your Lytics contact.
+
+Webhooks
+
+Webhooks offer one of the simplest and most flexible options for enabling applications to share data. They’re broadly used in the cloud computing world for integrations that can be stood up quickly with a minimal amount of code. The Lytics Webhook integration supports triggered delivery of audience membership (enters and exits) to a destination url where another application can pick it up. See our 
+Webhook documentation
+ for full details.
+
+Interested to understand how a Webhook integration might be applied? Look at this 
+Mobile Messaging use case
+ for a simple Lytics Webhook integration to support one-to-one personalized messaging with Twilio.
+
+Server-to-Server File Transfer
+
+Server-to-server file transfer is a very common mechanism for data sharing. Lytics File Service options enable Lytics to pull or push user data from an SFTP (secure file transfer protocol) using a CSV (comma-separated values) or JSON file. If you have another platform that also enables integrations via SFTP, this integration path helps to automate the process of passing data between your system and Lytics. Check out the 
+Lytics File Service documentation
+  to learn about setting up the file transfer job.
+
+In addition to SFTP, Amazon S3 is a very commonly used medium for server-to-server file transfer. Refer to our 
+Amazon S3 documentation
+  for data import and export options.
+
+Javascript Layer/JS Tag
+
+The Lytics JS Tag is the default option for client-side (website) data sharing with Lytics. The JS Tag supports the delivery of user behavior attributes from your website into Lytics and can also return back to the website user profile data such as audience members or content recommendations from Lytics for real time personalization. Refer to our JS Tag Documentation for full details.
+
+Mobile SDK
+
+The Lytics Mobile SDK facilitates in-app data sharing with iOS and Android. Similar to the JS Tag, the Mobile SDK supports user behavior-based data delivery to Lytics and profile data to the app for real-time personalization. See our 
+Mobile SDK Documentation
+ for more details.
+
+Using Your Data Warehouse
+
+If you already use a data warehouse to manage your data this is a great option for data import and export with Lytics. Lytics integrates with 
+
+Each of these providers offers options for importing data into databases which can then be imported into Lytics using Cloud Connect or our Data Import integrations. Lytics can also export data into each of these data warehouses.
+
+Updated
+ 
+10 months ago
+
+=== Content from https://docs.lytics.com/docs/adobe ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Adobe
+
+Overview
+
+This guide offers an overview of options for leveraging Lytics standard integration capabilities to connect with Adobe’s ads products.  
+
+The decisioning capabilities of Lytics can be combined with the personalized activation proficiency of the Adobe products:
+
+Options for sending data from Lytics to Adobe:
+
+Options for sending data from Adobe to Lytics:
+
+Further details on integrating with Adobe products
+
+Adobe Campaign 
+
+Lytics can export file based data to Adobe Campaign via hourly/daily CSV file export to an SFTP location. Adobe Campaign can import CSV files from its own secure location. This is more of a limitation on the Adobe Campaign side regarding limited API access. 
+
+There are many ways to get data into Lytics from Adobe Analytics. One common method is to use the Lytics Javascript tag (jstag.send) function to send eVars directly from the data layer into Lytics on page load. This method will simplify the onboarding process and minimize the need to do a data transfer from Adobe Analytics on a regular basis.
+
+As part of onboarding, we can help identify which data you would like to pull in for activation and identify the right mechanisms for ingestion. Lytics provides ways to ingest this data from scheduled SFTP pickups to Bulk API imports or transactional APIs. 
+
+Our Javascript Tag will communicate user audience membership to Adobe Target, which will respond with the appropriate site personalizations.  This Lytics data will be returned from our platform on page load and the Users Profile, segmentation information and content recommendations will be placed in the web page data layer.
+
+You can pass this information simply by leveraging the lio.data.segments object that is loaded onto every page where the Lytics JS tag is deployed. 
+
+Similar to other Adobe products, Adobe Ad Cloud supports the consumption of user audiences via SFTP, Json file upload, API (Lytics can create a webhook to stream data - but more conversation with Adobe will be needed) as well as direct from other Adobe products like Adobe Audience Manager.
+
+Lytics can also directly send audiences from Lytics into ad platforms (e.g. Facebook, Google, Linkedin, Twitter, Snapchat, Instagram, LiveRamp.  With our Google partnership, Lytics has early access to Google’s API-based integration for custom audiences within DV360. 
+
+We can deliver audiences into Audience Manager via SFTP or Data Warehouse integration, similar to how the above integrations have been documented.
+
+Updated
+ 
+3 months ago
+
+=== Content from https://docs.lytics.com/docs/developer-quickstart ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Developer Quickstart
+
+Introduction
+
+Welcome to the Lytics developer tier! This guide will walk you through the steps to get started with Lytics and leverage its powerful personalization capabilities for your website.
+
+Before You Begin
+
+Before diving into the setup process, make sure you have the following:
+
+Getting Started Checklist
+
+Getting started with Lytics is quick and easy! In just a few minutes, you'll be able to set up Lytics and start personalizing your website. We've focused this guide on the 3 essential steps to ensure a positive experience for you and your customers:
+
+Digging Deeper
+
+After completing the initial checklist outlined above, it's time to explore further avenues for enhancing and utilizing your profiles to their fullest potential. We've broken additional guides into two core focuses: 
+
+Building Profiles
+
+Here, we'll gain a comprehensive understanding of all available out-of-the-box attributes. Discover how to tag your site and integrate other sources to create robust and comprehensive profiles. This section is divided into:
+
+Default Attributes & Segments:
+
+Site Activity & Conversion Tagging:
+
+Using Profiles
+
+Here, we'll explore leveraging out-of-the-box personalization SDKs and APIs to deliver optimal user experiences. Discover how to harness Lytics' tools and integrations to create tailored experiences that resonate with your audience. This section covers:
+
+Guides & Inspiration
+
+SDK Documentation
+
+Updated
+ 
+6 months ago
+
+=== Content from https://docs.lytics.com/docs/consent ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Consent & Privacy
+
+For more information on Lytics' security and privacy program, please visit Lytics' trust center at 
+https://trust.lytics.com/
+
+Introduction
+
+As businesses continue to collect and utilize customer data to power their marketing efforts, obtaining, managing, and enforcing proper consent is crucial. This is important for complying with various privacy laws and regulations and maintaining trust with customers. This document will explore the importance of granularity in a consent strategy and how Lytics can assist in the consent management process. We will cover best practices to consider and provide guidance on where to get started. The following four steps will be outlined:
+
+By following these steps, businesses can establish a solid and effective consent management strategy that respects customer privacy and builds trust.
+
+Data Collection
+
+To maintain compliance with data privacy regulations, businesses need a clear and flexible path for collecting consent data. Lytics offers a range of SDKs and data collection APIs to support this effort. When approaching consent data collection, it is essential to consider the following:
+
+To address these considerations, Lytics has developed a suggested schema to get you started. Of course, this can always be customized via 
+Conductor
+ to meet your specific needs. 
+
+Data Structure
+
+Effective consent management requires a comprehensive set of properties that can be deployed to ensure compliance and maintain customer trust. These properties should cover various aspects of data collection, storage, and usage and provide businesses with the tools to manage consent-related data effectively.
+
+Examples
+
+📘
+We are here to help!
+
+We are here to help!
+
+Consent is not a one size fits all scenario. Each customers data and business goals are unique. Before deploying any of the following examples it is always recommended to consult with your Technical Account Manager or a Solutions Architect.
+
+Lytics deploys a flexible data model, and though the following is not representative of every method of collection, we've highlighted two working examples leveraging our available SDKs as a baseline:
+
+Collecting Consent via the Web: Lytics JavaScriptTag
+
+jstag.send({
+  "event": "form-submit",	
+  "consent": {
+    "purpose": "global",
+    "location": "Portland, OR",
+    "documents": ["generic-submit-form"],
+    "consented": true
+  }
+})
+
+
+Collecting Consent via Mobile: Lytics iOS SDK
+
+Lytics.shared.consent(
+  name: "consent-1",
+  identifiers: AnyCodable([
+    "userid": "my-fake-userid-1234"
+  ]),
+  attributes: AnyCodable([
+    "firstName": "Kevin",
+    "lastName": "McCalister"
+  ]),
+  consent: AnyCodable([
+    "documents": [
+      "terms_jan_2023",
+      "sharing_policy_jan_2023"
+    ],
+    "location": "Chicago, IL",
+    "consented": true
+  ])
+)
+
+
+📘
+
+When using Lytics SDKs, you do not have to include date within the data passed in the consent event. The timestamp of the consent event can be used to create the field and mapping for the date of consent.
+
+Profile Materialization
+
+Building from the collection strategy outlined in 
+Collecting Consent Data
+, we must determine how to materialize the consent-related data we've just collected to user profiles for segmentation. This can be achieved in a variety of ways. Regardless of the approach, however, it is essential to consider the level of granularity of the consent.
+
+Granularity
+
+When collecting consent from users, obtaining granular consent for each specific use of a customer's personal data is an important consideration. Granular consent means that customers are provided with a clear understanding of the exact purposes for which their personal data will be used and can choose to consent or withhold consent for each specific use case.
+
+For example, a business may seek granular consent from a customer to collect their email address and use it to send them promotional emails but not to share the email address with third-party partners for advertising purposes. This approach allows customers to make more informed decisions about how their personal data is used and provides greater control over their privacy.
+
+Obtaining granular consent not only requires careful planning and clear communication with customers about the specific use cases for their personal data but also a rock-solid means for enforcing an individual's consent wishes across all future touchpoints. 
+
+Schema
+
+Enforcement begins by ensuring consent wishes are accurately materialized on each user's profile. This is done by first defining consent-related attributes to be used in segmentation.
+
+Field Definition
+
+When defining profile fields, there are two primary considerations. What type of field should be used, such as a 
+string
+ or a 
+map
+ and how do you want to handle data merging when profiles are stitched?
+
+Type String
+
+Because consent is something that may change for a consumer over time, the values must represent the most recent data. As such, the 
+latest
+ merge operator is always recommended. This means that as additional data is stitched to a user profile, the most recent events that are mapped to a field will win.
+
+
+
+Type Map
+
+For a more complex or granular consent strategy, the map field type can be very helpful in accurately managing consent. As such, the 
+merge
+ merge operator is always recommended when trying to keep the key-value pairs up to date to the most recent consent state. This means that as additional data is stitched to a user profile, the most recent events that are mapped to a key-value pair will win. 
+
+
+
+Mapping Definition
+
+Mappings are then leveraged to determine how data from any number of streams map to the defined field. In the example below, we take a simple approach to map the boolean value of true or false to the consent field if the consent is related to 
+marketing-consent
+. 
+
+Though this is one elementary example, the same practice can be replicated to ensure a consent attribute has the status, timestamp, and context of any important policies or sources for segmentation.
+
+
+
+Segmentation
+
+Businesses can better understand their customers and create more effective campaigns by breaking down audiences into smaller, more targeted segments. Here we will discuss best practices for constructing "building block" audiences related to consent that can then be leveraged in campaign audiences. This progressive approach ensures consent rules are enforced while minimizing ongoing maintenance overhead. 
+
+Building Blocks
+
+Building Block Audience
+s provide the perfect means to maintain consent-related rules and extend the ruleset to all campaign audiences. The number and these audiences will depend on the granularity of your consent strategy. Still, as a basic example, we recommend creating both a "has consented" and "has not consented" counterpart for each level of consent. 
+
+This can be done simply through the GUI for our powerful segmentation engine, as shown below:
+
+
+
+Campaign Segments
+
+Once you have the necessary building blocks constructed, you can quickly integrate that rule set into your campaign audiences again through the GUI for our segmentation engine. The example below outlines a use case where you want to target high-value users who have opted in.
+
+
+
+Global Job Segment Filter (Consent)
+
+Configure a segment to prevent profiles from being sent to downstream destinations based on consent status or another relevant filter. This ensures that individuals who should be excluded will not be activated downstream.
+
+API documentation can be found 
+here
+.
+
+Updated
+ 
+7 months ago
+
+=== Content from https://docs.lytics.com/docs/idp-initiated-sso-legacy ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+IDP-initiated SSO (legacy)
+
+IDP-initiated SSO (Legacy)
+
+🚧
+
+This document describes a legacy implementation that Lytics is actively deprecating. If you're looking for details on the current SSO implementation, check out the 
+new documentation.
+
+Lytics supports enterprise Single Sign-On (SSO) by using 
+Auth0
+ as a service provider using 
+SAML protocol
+. Lytics integrates with Identity Providers (IdPs) in such a way that the IdP initiates SSO. That is, when your end user logs in to their IdP, they will use a global portal for your organization. Users can then click a link or button that will log them into Lytics seamlessly.
+
+Behind the scenes, the IdP will be contacting the Lytics Auth0 service provider to verify the user and redirect them to a logged-in instance of the Lytics app. This document describes the process for integrating with a new IdP that uses SAML.
+
+Service Provider Configuration
+
+To configure SAML for the Lytics service provider some information is required about your IdP. If you have a metadata file that contains SAML provider information this may be appropriate, just make sure that the following information is provided to 
+Lytics Support
+:
+
+Further configuration details such as mappings may need to be provided. Once this information has been received, Lytics can configure the SAML connection in Auth0.
+
+IdP Configuration
+
+After Lytics configures the SAML connection on the service provider, 
+Lytics Support
+ will provide a metadata XML file with the following information in order to complete the IdP configuration. The key fields in this metadata are:
+
+With this information, your IdP connection can be configured to complete the SSO integration.
+
+Testing SSO
+
+Once all the information has been configured in both the IdP and the Lytics service provider, you can test and verify that the SSO implementation works as expected. If you are using SSO as your only sign-in method, please disable any password restriction or expiration settings that may have been enabled in the UI.
+
+During the testing process, Lytics can be configured to allow both SSO logins and regular username and password (or Google OAuth) login through the app. This allows users to test SSO without disrupting the day-to-day usage of the app.
+
+If requested, once the SSO implementation has been tested and verified, Lytics can disable the use of other logins for an account.
+
+Troubleshooting SSO
+
+If it's known that SSO is going to be added to an account, then the user email addresses added to the account should match the email address present within the IdP. If the email address doesn’t match, then the login will fail as Lytics will not be able to verify that there is a user with that email address.  
+
+For instance, if the email listed in the IdP is 
+abc@123
+, and within Lytics it’s 
+def@456
+, then the user will have successfully been verified by their IdP, but the login within Lytics would fail as the authenticated user email would not match the user within Lytics. You would need to create a new user within Lytics with the email address 
+abc@123
+ for the SSO login to be successful. 
+
+It should also be noted that primary accounts are decided as the first account that a user was added to.  Due to this,  users from a single group/organization will often have different primary accounts. This is important for SSO as it will also be the account that the user is logged into at the start of their session. If SSO is enabled as the only means of login on one account and a user attempts to log-in using Google OAuth or their username and password, the login session will fail. The following options are possible solutions:
+
+Lytics Support
+ can assist in the troubleshooting process. When testing for the first time Lytics can enable logging to help troubleshoot any issues you may encounter. If you are receiving the error message shown below after being redirected to the app, that means there is an issue on the application side.
+
+
+
+The 
+Lytics Support
+ team can help debug this if you provide information on the login attempt such as the time of the login and the user and account.
+
+If you’re encountering an error earlier in the login process, such as before you are redirected to the Lytics app, this may be an issue with the SAML configuration either on the IdP or Service provider side. Lytics’ support team can review these issues and coordinate a fix, just contact us with the details of the issue.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/managing-cloud-connections ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Connecting Warehouses
+
+Access
+
+Cloud Connect tabs are found under 
+Data Pipeline
+ > 
+Cloud Connect
+. Connections configure the access to your data warehouses, and Data Models configure the SQL queries that are run to connect audience membership and profile attributes.  
+
+Creating a Connection
+
+Click 
++ Create New Connection
+ from the Connections Dashboard at the top right and complete the following steps.
+
+Authorization & Security
+
+The authorization selected for your Connection will control your Lytics account users' access to your data warehouse. You can control whether a user has read access to the entire dataset or individual tables, maintaining your security and governance practices within your data warehouse.
+
+Supported Data Warehouses
+
+Cloud Connect currently supports a number of popular data warehouses:
+
+Managing Connections
+
+Once you have created a Connection, you can access a summary page showing how data from your data warehouse is being leveraged in Lytics. At the top of the page, you’ll see the following information:
+
+The rest of the Summary tab shows how many active and inactive data models are built using this Connection as a data source and how many tables are accessible from this dataset. The Activity chart displays how many rows are being queried, which can have cost implications based on your data warehouse usage.
+
+Explore
+
+The Explore tab provides a simple Schema Explorer to validate that the data shown is as you would expect to see in your data warehouse. In the example below, we only connected an individual table, but here you will see as many tables as the authorization has read access to.
+
+Details
+
+The Details section displays all the information about setting up your Connection, including the authorization and configuration settings.
+
+Logs
+
+The Logs section records the history of events for this Connection, which are helpful to ensure your connection is working as expected. Below are the connection event types you may see. 
+
+Updated
+ 
+5 months ago
+
+=== Content from https://docs.lytics.com/docs/audiences ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Audiences
+
+Introduction
+
+Audiences are central to creating personalized marketing using Lytics. It is how groups of users get targeted and defines how cross-channel user data is used in campaigns. Lytics offers audiences as a tool that operates on user fields as well as other audiences. This provides the ability to craft audiences that target one user, every user, or any number in between.
+
+Lytics audiences are automatically kept up to date. As time passes, an audience that once targeted 500 users may grow to target 10,000. This is great if your audience is targeting engaged users who have shown interest in your upcoming product, but not so great if your audience targets users with outstanding support tickets. Lytics makes it easy to find these insights so your campaign strategies can be adjusted accordingly.
+
+Audiences can be used in Lytics Experiences, third-party ad campaigns, and tools like Google BigQuery for advanced reporting. When all of that isn’t enough, the Lytics APIs provide deep integrations with the Lytics platform.
+
+📘
+
+Access the audience builder from Lytics navigation menu by expanding the 
+Audiences
+ tab and clicking 
+Audiences
+. Once on the Audiences page, click on the  
++ Create New Audience
+ button.
+
+Creating Audiences
+
+Building new audiences allows you to target specific groups of your users. Why send the same email to your entire audience? Instead, send emails to distinct audiences with content that you know those users enjoy. Lytics gives you the ability to create audiences based on cross channel user data, behaviors and interests.
+
+Audiences can be built using existing audiences, user content affinity, your personalization campaigns, or by custom rules utilizing any user fields in your Lytics account. Create rulesets by combining multiple audiences and boolean logic to target users with as much or as little granularity as you require.
+
+Lytics updates your audiences automatically. Once an audience is built, users will join or leave whenever they match (or fail to match) the rules you have set. Export your audiences, often in real-time, to your integrated marketing tools giving you the power of Lytics however you engage with your users. 
+
+📘
+
+Access the audience builder from Lytics navigation menu by expanding the 
+Audiences
+ tab and clicking 
+Audiences
+. Once on the Audiences page, click on the  
++ Create New Audience
+ button.
+
+Building Audiences: Existing Audiences
+
+The 
+Existing Audiences
+ tab in the audience builder contains a list of all existing audiences and their size categorized by audience type such as characteristic. Characteristics are pre-built audiences pertaining to single user attributes such as location or behavior.
+
+Keep in mind that the audience sizes you see in this list are 
+not
+ real-time. They are updated every few hours for performance reasons. When creating or editing an audience, however, you will always see real-time numbers so that you can make precise decisions based on accurate data.
+
+You can use the 
+Filter by Audience Type
+ drop-down to filter the list or use the 
+Search
+ box to quickly find an audience by name.
+
+
+
+Select an audience or characteristic to add it to the definition of the audience you are building or editing.  
+
+
+
+Building Audiences: Content Affinity
+
+The 
+Content Affinity
+ tab in the audience builder is used to add Affinity-based rules to your audience. Since 
+Affinities
+ are a 
+group of related Topics
+, this allows you to effectively target users interested in several subjects or products. 
+
+
+
+In the example above, we created a "Lavender" Affinity for an online beauty store, which includes 6 Topics such as "lavender", "lavender lotion", and "lavender luxury." Instead of creating an audience with 6 rules (one per Topic), we just select our Lavender Affinity that contains those 6 Topics.
+
+Once you choose an Affinity for your audience, you will be able to select the range of affinity values. The histogram displays the distribution of user interest for the selected Affinity and is helpful to build an audience that has the desired size. By default, users with 
+Any Affinity
+ are selected. You can choose a built-in range by clicking any of the 
+Affinity
+ buttons or, to set a custom range, use the slider to refine the range of users to target. As you change the range, the total number of users that fit the range is shown in the right column.
+
+As soon as you create an Affinity, Lytics start scoring users against it as they interact with your content or products. For active users, you can expect this number to start populating within a few days. For inactive users, it can take up to 2 weeks for them to be scored against an Affinity. So it's recommended that you create Affinities in advance of the audience needed for an Affinity-based campaign.
+
+Topic-Based Audiences
+
+Under the 
+Custom Rule
+ tab in the Audience Builder, you can find the existing audiences based on Topics in your content taxonomy. If you want to create new audiences based on a single Topic, you can do so as follows:
+
+Once you hit "Add Condition", the custom rule for a Topic will look like this:
+
+
+
+Although Topics are still supported in the Audience Builder, we strongly recommend you use Affinities to build audiences for a more efficient workflow and more effective targeting. 
+
+Some users may find a field named 
+Inferred Content Affinity
+ when trying to build affinity or topic based audiences. This field contains topics that a user could be interested in even though they may not have interacted with the topics directly. To learn more about how these inferrences are made, you can read about our 
+content taxonomy process
+. Note that topic affinity already includes this information, but this field contains only inferred affinity. We would also recommend not using this field to build audiences as it is not a wholistic view of a user's affinity.
+
+Building Audiences: Custom Rules
+
+The 
+Custom Rules
+ tab in the audience builder is used to add any rule based on a 
+user field
+ to the audience being built or edited.
+
+Custom rules allow for ultimate access of all data that is aggregated in user fields. Custom rules are simple statements that can be combined to create very precise audiences. Using them correctly requires a thorough understanding of the data being used, but there is no replacement for this level of segmentation.
+
+🚧
+Audiences Field Value Limits
+
+Audiences Field Value Limits
+
+Audiences can have a maximum of 1,000 field values. "Values" in this context apply to a single evaluation against a user field.
+
+When exceeded, the error message "Audience too large! Remove values to save this audience" will be displayed. For example, the following scenarios would trigger the alert:
+
+
+
+The user field list displays all the fields in your account. The 
+Source
+ drop-down can be used to filter on the data stream the user field came from. The 
+Includes
+ drop-down can be used to filter user fields on the percentage of users that have a field. Use the 
+Search
+ input to search for a user field by name.
+
+Generally, to add a Custom Rule to an audience definition:
+
+There are variations to this general procedure based on the 
+type
+ of the user field and the operator chosen.
+
+User Field Types
+
+How you work with user fields in the Custom Rules tab will depend on way the field is mapped in on the user profile. 
+
+
+
+Numeric user fields are most commonly used for data that is counted. For instance, the number of times a visitor has been to a website or the number of times a subscriber has opened an email. Exact values can be matched, but more commonly, inequalities are expressed.
+
+Examples:
+
+
+
+Text User fields are commonly used for words and miscellaneous information. For instance, a user’s first name. Since there is no mathematical relationship between two text values, the operations used are generally exact match or partial match.
+
+There are 5 operator options when making audiences with text user fields:
+
+Examples
+
+
+
+Date user fields are commonly used for any data that represents a point in time. For instance, the last time a user visited a website. Most commonly, a date is chosen to divide the people who fall before or after that date. You will need to select both your starting point and a direction 
+in time
+ for your custom rule.
+
+Your starting point could be a fixed point in time (useful for milestone events, like product launches) or a relative point in time (useful for scheduled follow ups).
+
+Since each rule only handles going forward or backward from a single point in time, you may need to create two rules that work together to bound a range of time. One rule will capture all dates after the first point in time, and a second rule will capture all dates before a later point in time.
+
+Some date fields have a natural boundary, such as Last Visits, which will never include a date in the future. If you want all Last Visits from a point in time up until now, you would only need to create one rule.
+
+Examples
+
+
+
+
+
+
+
+
+
+Set user fields are commonly used for collecting related data over time. For instance, all the URLs a user has visited. These fields are generally used much like text user fields, even though the data is structured differently.
+
+Examples
+
+
+
+Map user fields are used to add hierarchy to a dynamic domain of data. For instance, 
+Events By Device
+ is a count of all events, but grouped by each device. So instead of building a rule by only specifying the count, the rule is built by first specifying the device, then the count. The device could be thought of as an additional, dynamic user field that is nested under the map user field.
+
+Selecting a Key
+
+
+
+Building the Condition
+
+Examples
+
+Out of the Box Custom Rules
+
+Some user fields are mapped by default and populated through the use of the Lytics Javascript tag and Experiences. These out of the box fields can be incredibly useful when building audiences using Custom Rules. 
+
+Assuming that you have not made changes to the 'default' web 
+LQL
+ file that is automatically created when the 
+Lytics Javascript Tag
+ is installed, the following custom rules are available to you for use when building audiences.
+
+
+
+There are a variety of use cases that involve targeting users who have engaged with previous marketing campaigns. For example, if a user converted on an 
+Iterable Experience
+ email, and you want to follow up with an SMS message. The steps below will walk you through how to create an audience to target users who were reached by or clicked on an 
+Experience
+.
+
+Building Audiences: Multiple Rules and Rule Sets
+
+All audience definitions are comprised of rules based on 
+existing audiences
+, 
+content affinity
+, 
+campaigns
+, and 
+custom rules
+. You may have noticed that after you add your first rule in the audience builder you have the option to 
+Add New Rule
+ or 
+Add New Rule Set
+. Adding new rules and rulesets, and setting the conditions for their interaction, gives you the ability to refine which users your audiences target.
+
+Working With Multiple Rules
+
+
+
+This audience has a single rule: included all users with the characteristic 
+Behavior: Perusers
+. This will select all users with an 
+intensity score
+ of 20 or less but with a 
+frequency score
+ of 20 or greater. These are users who interact often but not on a deep level. You can refine this rule further by clicking 
+Add New Rule
+. 
+
+
+
+ 
+
+
+
+This audience now also includes a rule for users who have a low content affinity for 
+Technology
+ content. Now that it has been added, there are three numbers of interest. The first number, 87,650, is the number of users with the characteristic 
+Behavior: Perusers
+. The second number, 466,730, is the number of users who have low affinity for 
+Technology
+ content. The third number, 11,514, are the users who meet 
+both
+ of these conditions.
+
+
+
+
+
+Clicking the 
+And/Or
+ toggle, will switch the way the two rules intereact. The audience now includes all 542,921 users who 
+either
+ have the characteristic 
+Behavior: Perusers
+ or have low afffinity for 
+Technology
+ content.
+
+Excluding Rules
+
+In addition to the 
+And/Or
+ toggle, there is the 
+Included/Excluded
+ toggle. This toggle 
+inverts
+ a condition.
+
+This audience contains a rule that targets the 159,084 users with the characteristic 
+Browser / OS: Mobile
+ or users who have used a mobile devices.
+
+
+
+Clicking the 
+Include/Exclude
+ toggle the audience will now target the 705,166 users who 
+do not
+ have the characteristic 
+Browser / OS: Mobile
+.
+
+
+
+The sum of the two numbers will be the total audience size that meets those rule(s).
+
+
+
+
+
+This is especially apparent when using a rule such as 
+Created Timestamp Exists
+. Every user in Lytics will have a timestamp of when they were created. Therefore, the number of users who 
+do not
+ meet the condition of having a created timestamp will always be 0.
+
+
+
+
+
+Working With Rule Sets
+
+When building elaborate audiences, having a single set of rules that are evaluated using either an 
+AND
+ or an 
+OR
+ is not enough. A ruleset is a set of rules that itself can be used as a rule for an even larger set of rules that is again evaluated using an 
+AND
+ or an 
+OR
+.
+
+
+
+This audience has two rulesets. The first ruleset has one rule: all users who have the characteristic 
+Email Capture Status: Known Email
+. The second ruleset has two rules: all users have some affinity for 
+Marketing
+ 
+OR
+ 
+Advertising
+ content. Combining these two rulesets with the 
+AND
+ operator produces an audience that targets users with an email address that have some interest in either marketing or advertising. This audience could be used to email a special newsletter or promotion about a product or trending topic that is related to marketing or advertising.
+
+Excluding Rule Sets
+
+
+
+Rulesets, just like rules, can be excluded. Clicking the 
+Include/Exclude
+ toogle on the second ruleset will result in the audience targeting all users with an email address who do not have some interest in either marketing or advertising. It could be used to send a different email to the remainder of your users with email addresses.
+
+Building Audiences: Configuration Options
+
+Configure your Lytics audiences with the following options to execute your use cases.
+
+
+
+Enabling API Access
+
+By default, newly created Lytics audiences are not enabled for API access and thus will not be available to public APIs. Enabling API access is necessary when integrating with other client-side tags/ pixels, 
+Pathfora
+, or the Lytics 
+personalization API
+ endpoints.
+
+Select the 
+API Accessible
+ checkbox to enable access.
+
+Generate Insights
+
+Lytics Insights
+ provide visibility into the performance of your audiences and campaigns as users interact with your brand. Insights are generated out-of-the-box for Lytics Behavioral and Engagement audiences. You can also request up to 
+10 custom audiences
+ to be prioritized as candidates for generating Insights.
+
+When creating a new audience or editing an existing one, select the 
+Generate Insights
+ checkbox to make that audience a candidate for Insights (shown in the screenshot above).
+
+Lytics prioritizes Insights based on the statistical significance of the data and the most frequently used audiences for your account. Therefore, even if you select the "Generate Insights" option for a particular audience, it is not guaranteed to show up in your Insights drawer.
+
+Managing Audiences
+
+Managing audiences becomes important as an account develops and your user base grows. Audiences are critical to both targeted campaigns as well as discovering insights about your users. 
+
+The 
+Audiences
+ section of Lytics houses all of your account’s audiences. You can view, create, and manage audiences from this section.
+
+
+
+Audiences are listed alphabetically by default. Click any column header to change the sort property. Common sort options are 
+Last Modified
+ and 
+Size
+ (the number of users in the audience).
+
+Naming Your Audiences
+
+For better targeting, Lytics encourages the creation of many audiences. They’re easy and free to make. When working with a large library of audiences, naming conventions become important.
+
+Name your audiences by purpose and include any categorization in the name. Giving them a common prefix (e.g., Holiday Promo: Tech lovers, Holiday Promo: Loyal Shoppers) will help you to keep everything related next to each other in the user interface.
+
+
+
+Audiences appear throughout the Lytics platform. Make sure your naming convention works in any context to avoid confusion.
+
+Finding Audiences
+
+The easiest way to find an audience is to use the 
+Search
+ box. As you enter your search term the audience list will display any matching audiences. 
+
+📘
+
+Fuzzy matching is used to search for audiences so the results will not be an exact match to the search term.
+
+Editing Audiences
+
+Occasionally you will want to return to previously created audiences and update the logic used to create the segment. 
+
+🚧
+
+When editing audiences that are in an active triggered workflow, it is recommended that you reconfigure the job after the audience changes have been made.
+
+Duplicating Audiences
+
+🚧
+
+Audiences created by duplication will retain the name and slug of the duplicated audience, but with have "duplicate" appended at the end. It is recommended that you update both the name and manually input a unique slug name for clarity sake.
+
+Deleting Audiences
+
+Deleting audiences is an integral part to keeping a tidy workspace in Lytics. Audiences can be deleted in one of two ways: individually or in batch.
+
+Note: Deleting an audience does not delete the users associated with that audience. 
+
+Deleting an Individual Audience
+
+Deleting Multiple Audiences
+
+Maintaining Audiences
+
+📘
+
+From the 
+Audiences
+ page, click any audience in the list to view all of its details.
+
+An audience's landing page contains a lot of valuable information about your users and the audience itself. At the top of the audience page, you will find the following information...
+
+Below this information you will find multiple tabs where you can access additional information about the audience.
+
+Audience Summary
+
+The audience summary page is designed to provide insights into the current state of an audience as well as how the audience has changed over time. When first navigating to an audience landing page, this tab will be selected by default.
+
+The Summary tab includes the following sections:
+
+Activity Graph
+
+After creating a new audience, the audience size graph will begin to populate within a day. Depending on the date range you specify, the activity graph can be viewed using following intervals:
+
+Audience Size Trends
+
+📘
+
+The statistics for audience size start from the creation date of the audience.
+
+Keep in mind that audiences are real-time. This makes them quite different from the user lists in other marketing tools which are frozen in time and only change when you update the list. Audiences are filters applied to the total audience and will change whenever a user's behavior changes in a way that will add or remove them from the audience definition. In this way, tracking audience size over time is a powerful reporting tool.
+
+For example, you create an audience that contains users who have visited the international news section of your website. Upon creation the audience contains 120,000 users. You then run a marketing campaign promoting your international news section. After one week, the audience has grown from 120,000 to 400,000 users with most of the growth occurring in the 24 hours after the campaign was launched. This is clear evidence that the campaign was effective, and most effective in the first 24 hours, at driving users to your international news section.s
+
+Audience Details
+
+Select the 
+Details
+ tab to view the following sections:
+
+Audience Characteristics
+
+Select the 
+Characteristics
+ tab to view the characteristics of users in this audience. Characteristics include:
+
+Audience Logs
+
+Select the 
+Logs
+ tab to view recent events relating to this audience. Activity such as creation, updating and syncing can all be found here.
+
+Activating Audiences
+
+Activating Audiences in Experiences
+
+Creating a Lytics Experience is one of the easiest and most common ways to activate Lytics Audiences. Learn more about 
+Lytics Experiences
+ to find out how you can engage your audiences on site.
+
+Accessing Audiences Using the Public Entity API
+
+The Lytics Experience Editor is a great way to get started with website personalization, but through the use of the Lytics API, there is much more that can be done. 
+
+The Lytics Experience editor is powered by the Pathfora SDK which is in turn powered by the Lytics Entity API. The Lytics Entity API is how to find out what audiences the current user belongs to as well as what traits the user has. Using the Lytics Entity API it's possible to create completely custom personalized experiences on your site.
+
+📘
+
+Personalizing a site using the Public Entity API requires making code changes to the host website.
+
+To read more about the Entity API, 
+check out the API documentation
+.
+
+Exporting Audiences to Other Tools
+
+A core benefit of Lytics is exporting your smart audiences to the other tools in your marketing tech stack. That way, the campaigns run on your channels are enriched with the 
+behavioral data
+ and 
+content affinities
+ powered by data science on Lytics. 
+
+From the audience overview page, click the 
+Export
+ button to create a new export job . The 
+Export
+ menu lists built in exports such as 
+Email CSV
+ and any out of the box Integrations. Specific instructions for exporting can be found in the Integrations section (under the desired tool) of our documentation.
+
+Updated
+ 
+5 months ago
+
+=== Content from https://docs.lytics.com/docs/insights ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Insights
+
+Introduction
+
+Lytics Insights provide visibility into how your audiences and campaigns perform and recommend how you may improve engagement, drive conversions, and increase marketing ROI. 
+
+You can think of Lytics Insights as a way to connect the 
+data
+ you have with the 
+decisions
+ you are making for marketing campaigns. Defined in a few words, Lytics Insights are:
+
+Insights serve as a key ingredient to achieve marketing personalization. To effectively leverage customer data, you must apply it throughout your campaign planning and execution process. Unlike metrics that remain on a BI dashboard or report, Lytics Insights are designed be 
+immediately activated
+ in your segmentation and campaign strategies.
+
+If your account package includes Insights, you can access Insights from anywhere in the Lytics UI. 
+
+How Insights Work
+
+Insights surface meaningful data and recommended action, enabling you to make better, data-driven decisions during your campaign planning and execution. The core idea behind Insights is simple. Insights are a combination of facts and actions:
+
+Insights are made possible thanks to the data science capabilities built into Lytics. The heavy lift of processing and interpreting data is automatically handled by machine learning models under-the-hood. 
+
+This is a prime example of how machine learning can augment (not replace) a marketer’s role. Machines efficiently and accurately sift through lots of data, allowing people to then make use of the important information in the most relevant context. For example, a model can predict which users are most likely to churn, and a marketer can then target those at-risk users with a win-back campaign on Facebook.
+
+Insight Cards
+
+Insights are presented as 
+Insight Cards
+ that are available throughout the entire app.
+
+Simply navigate to the left-hand side of the Lytics UI to open the 
+Insights Drawer
+, which contains a list of 
+Insight Cards
+ unique to your account. 
+
+Below is an example of an Insight card and what it's comprised of:
+
+
+
+Insights are generated and refreshed on a 
+weekly basis
+ to ensure you are viewing the most recent user data. Insights expire after 2 weeks, so you only target and activate an audience and campaigns during a relevant time frame.
+
+The Insights Drawer will display a maximum of 25 cards at a time. Insights will be created for up to 
+10 custom audiences
+, in addition to Lytic's out-of-the-box engagement audiences. Lytics will prioritize Insights based on the statistical significance of the data and the most frequently used audiences. 
+
+Compositional Insights
+
+Compositional Insights help you understand the makeup of your audiences. This information can answer, “what makes an audience unique?” and “How should I target these users differently?”
+
+Compositional Insights make it easier for you to create effective segmentation strategies. They compare data fields within audiences to surface which attributes drive user behavior. Compositional Insights currently include the following:
+
+Audience Pairs
+
+This Insight compares high-value audiences on their levels of engagement. This can take the form of comparing Lytic's out-of-the-box audiences on a particular behavioral score or a custom audience. 
+
+
+
+As a bite-size piece of information, this Insight Card has provided:
+
+Field Candidates
+
+This Insight compares the prevalence of specific data fields within two audiences. Candidates included are 
+fields used in audience definitions
+ and fields from the 
+Promoted Schema Fields
+ in your 
+Account Settings
+.
+
+
+
+Having a granular understanding of your audiences allows you to make more strategic targeting decisions. For example, there may be a data field that your organization is paying to collect. If you discover through an Insight Card that this field is not performing as expected in your campaigns, you could save marketing spend by eliminating that field and using others that are shown to be more predictive of user behavior.
+
+Experience Insights
+
+Experience Insights help you track and understand campaign performance. This information can answer, “Which campaigns are resonating with my users?” and “Are my marketing tactics driving engagement or conversions?”
+
+Experience Insights allow you to refine campaigns based on current metrics proactively. Since Lytics Insights are generated and refreshed every week, you can take action to improve a campaign while it’s running. 
+
+Experience Insights include the following types:
+
+Experience Management
+
+This Insight will surface when an experience is missing UTM parameters, which enable Lytics to track conversions from downstream tools such as Facebook.
+
+
+
+While this Insight is more straightforward than the other types Lytics offers, it helps you quickly identify when an Experience configuration is incomplete, affecting your ability to track performance and target users who have previously engaged in future campaigns.
+
+Experience Performance
+
+This Insight appears when a significant spike up or down in campaign performance exists. Awareness of such incidents allows you to make the necessary changes to improve campaign ROI. 
+
+For example, if conversion rates have rapidly declined for a particular campaign in the last week, you may need to reevaluate and consider changes such as refining your audience, messaging, or campaign tactics.
+
+Activating Insights
+
+Taking action based on your Insights is the most important part of the process. As the introduction explains, Lytics Insights are designed to be actionable. By understanding how users interact with your brand at a granular level, you can iterate campaigns to improve their performance and deliver better user experiences. 
+
+Activating against Lytics Behavioral Scores
+
+User engagement is a crucial component of personalization. Each Lytics Score (quantity, frequency, recency, intensity, momentum, propensity) indicates a different aspect of user behavior,  but overall, higher scores indicate high engagement, while lower scores indicate low engagement. 
+
+Below are some everyday use cases you might consider, depending on whether the target audience has 
+higher
+ behavioral scores (anything above 50) or 
+lower
+ behavioral scores (anything below 50).
+
+Targeting Users with Low Engagement
+
+There are two main approaches to reaching unengaged users. The first is to drive engagement using a variety of tactics, such as messaging on different channels, targeting based on content affinities, etc. The second approach is to increase marketing efficiency by suppressing these users, thus improving your conversions. 
+
+Targeting Users with High Engagement
+
+When creating strategies around your most active users, you will want to keep them engaged by delivering relevant content and establishing a first-party relationship that increases their Lifetime Value (LTV). You can find more users who are similar to your best customers using lookalike audiences.
+
+You can also learn more about what makes these engaged users different, which can inform your overall targeting strategies. 
+
+Activating against Lytics Content Affinity
+
+Giving your users more of what they love is a great tactic to consider to either drive engagement for less active users or to keep currently active users engaged.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/partner-types ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Partner Types
+
+Our partners are trusted collaborators who work directly with our customers to ensure successful implementation and ongoing success. They work directly with Lytics customers on implementations and provide post-implementation technical and strategic support. Through their expertise and commitment, our partners help to streamline processes, enhance customer satisfaction, and drive the effective utilization of our solutions.
+
+Types of partners:
+
+Updated
+ 
+4 months ago
+
+=== Content from https://docs.lytics.com/docs/account-details ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Accessing Accounts
+
+Introduction
+
+Under the account menu in the main navigation, find the Account Settings option.
+
+You should see your account information, such as the name of your account, domain, the account owner's email, and more.  
+
+You can edit your account name, domain, and primary contact email from this page anytime. Once you change one of these values, you will be prompted to save or undo the changes.
+
+Account ID and account number are never editable. They are assigned at account creation and are permanent identifiers.
+
+Navigating Accounts
+
+For users who have access to multiple accounts, you can quickly and securely navigate between Accounts using our account switcher at the bottom right of the primary navigation:
+
+1. Click "Switch Account"
+
+2. Select Account
+
+A menu will appear outlining the accounts you have access to. Simply select an account and a new tab will open with this accounts dashboard.
+
+Updated
+ 
+over 1 year ago
+
+=== Content from https://docs.lytics.com/docs/lytics-communication ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Lytics Communication
+
+There are many reasons why Lytics and partners need to communicate across different tools, here are some best practices on how to get the most out of your communication with Lytics staff. Please note, that this is not an exhaustive list of scenarios, the following should be considered a guideline.
+
+Community
+ - Lytics has a community section on their docs site where users of Lytics can ask general questions about Lytics, how to use Lytics, and what’s possible with Lytics. Think of this community area as your Lytics Stackoverflow. The Lytics Community can be found here.
+
+Some examples of community-type questions are:
+
+Customer-specific questions or questions that regard Solution Architecture (complex) for a customer are not suitable for the Community section and should be asked in Zendesk.
+
+Zendesk
+ - All customers and partners working on behalf of customers can use the Lytics Support Portal for the following:
+
+Partners can contact the Lytics support team through support.lytics.com or 
+[email protected]
+, which will create a Zendesk ticket.
+
+Slack & Email 
+- Partners are encouraged to communicate directly with the Lytics team for other partnership needs. Please prioritize Community and Zendesk for any customer CDP-related questions.
+
+Some examples of Email and Slack communications are:
+
+Updated
+ 
+4 months ago
+
+=== Content from https://docs.lytics.com/docs/pipeline ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Data Pipeline
+
+Welcome to the Pipeline & Profiles section, where we will explore data management and analysis fundamentals. This section will delve into the concepts of data streams, data sources, and queries/LQL.
+
+Data Sources
+ refers to the origin of the data and how you can leverage hundreds of different out-of-the-box integrations or APIs to aggregate your data from disparate channels.
+
+Data Streams
+ outline how to control and monitor data that is being streamed into the Lytics platform.
+
+Queries & LQL
+ breaks down our core query language and capabilities for transforming and unifying your data.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/sdks-mobile ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Mobile
+
+Welcome to the Lytics Mobile SDK documentation, where we will explore the native mobile SDKs for both Android and iOS platforms. In this section, we will delve into the capabilities and features of these SDKs, which enable app developers to integrate Lytics' powerful customer data platform directly into their mobile applications.
+
+Lytics Mobile SDKs provide a simple way to collect data from mobile apps and enrich user profiles with valuable insights, including user behavior, preferences, and interests. By integrating Lytics Mobile SDKs into your mobile app, you can better understand your customers and deliver personalized experiences that drive engagement, retention, and revenue.
+
+In this documentation, we will cover how to install and configure Lytics Mobile SDKs and use them to identify users, manage consent, track events, and personalize experiences. 
+
+Whether you are a mobile app developer or a marketer, this documentation will provide you with the essential knowledge needed to leverage Lytics Mobile SDKs to build better mobile experiences and gain deeper insights into your customers' behaviors and preferences.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/getting-started-with-reports ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Reports
+
+Learn about Lytics' Audience Reporting
+
+With  Lytics' Audience Reporting, you can quickly create powerful dashboards with your customer data. This documentation explores the capabilities of Lytics' reporting system and how it can be customized to meet your unique business needs. The following links provide technical details for creating custom reports and how they can be used to gain deeper insights into your customer data.
+
+What are Reports?
+
+Components
+
+Managing Reports
+
+Dashboard Report
+
+Updated
+ 
+over 1 year ago
+
+=== Content from https://docs.lytics.com/docs/what-is-vault ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+What is Vault?
+
+Introduction
+
+Vault is a centralized hub for managing security and other administrative features in Lytics. It provides a single place for Lytics admins to access and change their key security features and user permissions, regardless of product. This means that the controls set in Vault apply to Conductor, Decision Engine, Cloud Connect, and any other products associated with your Lytics account.
+
+Take a quick tour of Lytics Vault.
+
+Navigating Vault
+
+Vault is comprised of the following sections:
+
+Who can access Vault?
+
+Vault is focused primarily on account admins or those that have permission to administer settings, user access, etc. Based upon these permissions, your experience in Vault may vary, and all sections outlined above may not be available. 
+
+📘
+
+If you are unable to access a section please reach out to your account administrator to request those adjusted permissions.
+
+In general, Admins will be able to access all areas. Data Managers, Campaign Managers, Experience Managers, and Goal Managers can access the Authorizations section to manage the credentials for their jobs and experiences. Finally, all Lytics users, regardless of role, should have access to view the JavaScript tag installation page under Account Setup, and they should be able to view their user profile where they can change details such as their Name, Email Address, Phone Number (for two-factor authentication) and change their password. Your user profile will be accessible under the main Lytics navigation under "Manage My Profile."
+
+Notable Changes
+
+For existing customers, slight changes will impact your day-to-day management activities.
+
+Product Switcher
+
+Vault will be available directly from the primary product switcher at the top left of your Lytics interface. This will be your primary access point for account management from now on.
+
+Account Usage
+
+Our account usage data and quota meters received a much-needed facelift. The usage metrics act as the Vault "dashboard" for admin users.
+
+
+
+Account Settings
+
+Account setting sections are now accessible through the main navigation. These settings have received a minor facelift update. The form controls for multi-text fields have been slightly updated for a more standard user experience. In addition, users are now prompted to save or discard their changes when navigating away from these pages with unsaved settings.
+
+Users
+
+The user list is now sortable and filterable based on name, email, who invited them, and how long they've been a Lytics user. Each user has a page to view their details and roles. In Vault, in addition to assigning new roles, an administrator can edit any user's name and email address.
+
+
+
+The user invite form is now on its page to improve the flow and experience of inviting users. Roles are now sorted into two categories - Admin or Custom Roles. An admin inherently has access to everything, while custom roles give a finer-grain definition of what the user can access. The details on each role are shown in a tooltip when you hover over the role name.
+
+
+
+Access Tokens
+
+The access tokens list is now sortable and filterable based on the name, description, the creator of the token, or when/if it has expired. You can now view additional details about the access tokens you've already created, such as the roles assigned, when it was made, and when it will expire. In addition, new access tokens can now be assigned as an admin or with any combination of more granular access roles.
+
+
+
+Authorizations
+
+Authorizations are now to be created and updated only in Vault. You will still be able to utilize the auths you create in Vault in other products, but for example, when creating a job in Conductor or Decision Engine, if you don't see an authorization you want to use for that job, you will be linked into the authorizations wizard within Vault to create the auth.
+
+
+
+JavaScript Tag Installation
+
+This page remains unchanged, with simple styling changes and updated links to our documentation for troubleshooting.
+
+Updated
+ 
+over 1 year ago
+
+=== Content from https://docs.lytics.com/docs/leveraging-user-profiles ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Leveraging User Profiles
+
+Welcome to the Leveraging User Profiles section, where we will explore how to use Lytics user profiles to gain a deeper understanding of your customers and deliver personalized experiences. This section will cover how to define and segment audiences, personalize experiences, and track user behavior using user profiles. Whether you are a marketer, developer, or data analyst, this section will provide you with the essential knowledge needed to leverage Lytics user profiles and gain insights into customer behaviors and preferences.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/understanding-user-profiles ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+User Profiles
+
+Introduction
+
+User profiles provide relevant insights about individual customers in relation to your entire customer base. Referencing a user profile helps answer questions about who your customers are and how they are engaging with your brand.
+
+Initially, the user profile offers a way to test your Lytics implementation and validate the outcomes of your marketing tactics. For example, you can check if campaigns are working as expected by using a “test” persona and seeing how the user profile data gets updated.
+
+As you get deeper into building campaigns, the user profile provides insight into how your marketing influences user behaviors. For example, if you run a mobile campaign, you can drill down to see if customers are engaging on mobile devices, what days and times they are most active, and what types of content they are affinity for. User profiles are updated in real-time, but there can be a delay while the data is being processed and scores are being calculated for behavior and content affinity. 
+
+To provide quick access to customer data, the user profile is divided into three tabs: 
+Intelligence
+, 
+Audiences
+, and 
+Details
+.
+
+Anatomy of a User Profile
+
+Intelligence
+
+The intelligence tab gives a snapshot of key information about an individual user. At the top, a bar is displayed to help you quickly understand user engagement across all channels: 
+Likelihood to re-engage
+, 
+Current engagement level
+, and 
+Frequency of user interactions
+.
+
+
+
+Each of these boxes summarizes the data science-powered behavioral scores into practical terms. The individual behavior scores and the user’s content affinity are displayed below. This rich data based on a user’s actual behavior is available thanks to the predictive analytics built into Lytics.
+
+
+
+Recent activity by channel
+
+This module gives an overview of which channels (email, web, mobile, etc.) an individual user has been active in. When appropriately mapped, it will also provide information on when users were active on each channel (within the last day or within the last 30 days).
+
+
+
+NOTE
+: If this module is empty, please see below for details on how to configure the user fields. As with all data mapping exercises, it is best to include your Customer Success representatives for optimal results.
+
+If you are customizing LQL or handling custom streams, it is important to understand how this module should be configured. For all our built-in integrations, Lytics includes this data mapping by default. 
+
+At its core, the "Recent activity by channel" module is built from a single user field. This field will not exist in legacy accounts and must be added to the existing LQL manually. For all new accounts that get the latest default LQL files, the baseline should be included. 
+
+In order to handle either custom data mapping for an account or backfill an old account, the user field 
+last_channel_activities
+ must be defined in a streams LQL file. This field is defined as a 
+map[string]time
+ and should not be altered. 
+
+In each stream you'll simply map a string, such as "web" or "email" to a timestamp such as 
+epochms()
+ in order to update the field. A more lengthy example for an email LQL might look something like:
+
+-- Profile Support
+map("email", epochms())    AS last_channel_activities    IF eq(tolower(action), "open") OR eq(tolower(action), "click")    SHORTDESC "Last Activity By Channel"    KIND map[string]time
+
+
+The example above is for when you only want to map the activity event in the case of a click or open. This definition will vary from stream to stream.
+
+When it comes to which keys to use, we recommend following these standards for common channels:
+
+Unique identifiers
+
+Highlights the identifiers that have been used to materialize this particular user's profile.
+
+
+
+Event chart
+
+The event chart shows a user’s activity by hour and day of the week. The top right of the chart highlights when a user is most active, for example Tuesdays at 10am.
+
+
+
+Audience Membership
+
+This tab displays a list of all the current Audiences a user belongs to and the total size of each audience. Audiences include factual information such as “Has Email Address” and “Known Location” along with Lytics score-driven characteristics such as “Deeply Engaged” or “Binge User”. 
+
+
+
+Profile Details
+
+The details tab gives an under-the-hood display of the exact user fields contributing to a user’s behavioral data and their audiences. Unique identifiers are shown first, which are essential for enabling cross-channel mapping. For all user fields, the associated stream and value is provided.
+
+
+
+Profile Picture
+
+Some profiles may include a profile picture when viewed in the user interface. This image comes from 
+Gravatar
+. If the profile in question has an email address, Lytics converts it to an MD5 hash. That hash is then used to look up the corresponding image on Gravatar. This image is only displayed in the Lytics UI and is not part of the profile itself.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/data-collection-onboarding ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Data Collection & Onboarding
+
+Welcome to the Data Collection and Onboarding section, where we will explore the process of collecting and onboarding data into the Lytics platform. This section covers how to ensure data quality and accuracy, including how to integrate with various data sources and best practices for data management. Whether you are a developer, system administrator, or data analyst, this section will provide you with the essential knowledge needed to gain deeper insights into customer behavior and preferences within the Lytics platform.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/sdks-web ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Web
+
+Welcome to the Lytics JavaScript SDK documentation, where we will explore the capabilities and features of the Lytics JavaScript SDK. This SDK enables website owners and developers to integrate Lytics' powerful customer data platform directly into their websites and web applications.
+
+With Lytics JavaScript SDK, you can easily collect data from website visitors and enrich their profiles with valuable insights, including behavior, preferences, and interests. By leveraging the Lytics JavaScript SDK, you can better understand your customers and deliver personalized experiences that drive engagement, retention, and revenue.
+
+In this documentation, we will cover how to install and configure the Lytics JavaScript SDK and how to use it to identify users, manage consent, track events, and personalize experiences. We will also examine integrating Lytics JavaScript SDK with other third-party analytics and marketing platforms to create a complete web data strategy.
+
+Whether you are a website owner, developer, or marketer, this documentation will provide you with the essential knowledge needed to leverage the Lytics JavaScript SDK to build better web experiences and gain deeper insights into your customers' behaviors and preferences.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/cloud-connect-intro ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+What is Cloud Connect?
+
+Introduction
+
+Cloud Connect allows you to run complex SQL queries directly against your data warehouse and translate the resulting records into profile attributes and audiences.
+
+Cloud Connect in Action
+
+📘
+Cloud Connect in Action
+
+Cloud Connect in Action
+
+Check out the 
+solution architecture developed
+ with Google which leverages BigQuery and Analytics Hub in addition to Cloud Connect to create a rich pattern for secure data collaboration and activation.
+
+Getting Started
+
+Accessing Cloud Connect
+
+Cloud Connect is available to all Lytics customers. If you don't currently have access via the product switcher at the top of the primary navigation, contact support or your account management team.
+
+Common Use-cases
+
+Cloud Connect unlocks many use cases enabling marketers to segment their customers based on any attributes stored in their database. A few examples include:
+
+📘
+Need a warehouse?
+
+Need a warehouse?
+
+Don't currently have access to a data warehouse? Lytics has you covered with Lytics Warehouse. We provide a simple data warehouse on top of Google BigQuery to all of our customers as part of Conductor. Simply reach out to account manager or support for access and information.
+
+How it Works
+
+Cloud Connect augments the rest of the Lytics CDP suite by providing a secure and flexible entry point into your data warehouse. Users can quickly write a standard SQL query to perform a number of complex data manipulations or aggregations and stream the results directly to materialized user profiles. From there, generate insight-heavy reports, enrich targeted segments, and activate across hundreds of marketing channels in just a few clicks. 
+
+Below you'll find an overview of the general architecture, which can be summarized into these key value drivers:
+
+
+
+Updated
+ 
+over 1 year ago
+
+=== Content from https://docs.lytics.com/docs/chrome-extension ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Chrome Extension
+
+Lytics Dev Tools Chrome Extension
+
+Overview
+
+The Lytics Dev Tools Chrome extension is a comprehensive tool designed to simplify validation, debugging, and exploration of Lytics' client-side capabilities as facilitated by our core and personalization SDKs. With this extension, users can easily:
+
+Installation
+
+Install Now
+
+
+
+Install Extension:
+ This extension is installed directly into your Chrome browser. To install, visit the 
+primary extension page
+ and follow the instructions. 
+
+Pin Extension to Nav Bar:
+ Once installed, we recommend pining the extension to your top bar for easy access.
+
+Getting Started
+
+Once the extension is installed, you can visit any website where Lytics is or should be installed and begin debugging.
+
+Debugger
+
+The debugger section of the extension serves multiple purposes. Firstly, as we did previously, it allows you to validate installation, ensuring that the Lytics tag is successfully implemented. Additionally, it provides access to the full active configuration of the JavaScript SDK through the configuration tab. Moreover, it includes a live event debugger that monitors and displays comprehensive details of any calls made to the Lytics APIs in real time. This feature is particularly valuable for reviewing data sent via 
+jstag.send
+ calls, offering insights into the interaction between your website and Lytics APIs.
+
+Profile
+
+In the "Profile" section of the extension, users gain a live look at the current visitor's profile, providing valuable insights into their browsing behavior and demographic information. This section offers a snapshot of key details, such as the visitor's unique identifier and behavioral scores, allowing for a quick assessment of their engagement level. Additionally, users can access a detailed view of all information available to the browser, including demographic data, past interactions, and any custom attributes stored in the visitor's profile. This comprehensive overview enables users to tailor their strategies and personalize experiences based on individual visitors' specific characteristics and preferences.
+
+Personalization
+
+In the "Personalization" section of the extension, users gain access to a log of all active Lytics experiences and campaigns, along with their associated details. This feature proves invaluable when debugging the configuration of experiences or ensuring that overrides have produced the expected results. Users can easily track the performance and behavior of each personalized element on their website by providing a comprehensive overview of active campaigns and experiences, including their parameters and settings. This functionality streamlines debugging and empowers users to fine-tune their personalization strategies for optimal effectiveness.
+
+Updated
+ 
+about 1 year ago
+
+=== Content from https://docs.lytics.com/docs/importing-external-experiences ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Importing External Experiences
+
+Importing External Experiences
+
+You can import existing marketing initiatives currently managed by your channel providers, which enables you to quickly gain insights about the campaigns you’re already running. You can then take action by connecting these Experiences to your Lytics audiences.
+
+While you can monitor Experiences and activate audiences for them within Lytics, the management of external Experiences still happens inside your channel tools. If you want to stop, delete, or edit the execution of an Experience, you need to do so within the provider. If you choose to delete an Experience in Lytics that still has a matching campaign in your channel tool, it will show up on the import list and can be re-imported.
+
+Centralize cross-channel reporting
+
+Lytics serves as a central hub to monitor your cross-channel marketing, making it easier to understand and improve the performance of  your campaigns. For example, instead of logging into Facebook to check your ad campaign metrics and Iterable to check your email newsletter open rates, you can monitor the performance of both tools within your Lytics dashboard. 
+
+To start monitoring external Experiences on Lytics, follow the batch import steps.
+
+Monitor Experiences via batch import
+
+On your Lytics dashboard, navigate to 
+Experiences
+, and select 
+Add Experiences > Import
+.
+
+
+
+Select your provider
+
+The Lytics Canvas connects out-of-the-box with select channel providers. Over time, more providers will be added to this list. If you want to use a provider that is not currently available, you can use the "Generic Experience" workflow to export Lytics audiences to any of your integrated providers.
+
+
+
+Authorize
+
+Next, you will be prompted to select an authorization for your chosen provider. Existing authorizations will be shown. If you have multiple accounts within a particular channel such as Facebook, you will choose which account to import from. If you don’t have an authorization, you will be prompted to add one before continuing. For Facebook, there is a second step for authorizing Ad Set ID after you’ve selected your account ID.
+
+Import Experiences
+
+Finally, select the Experiences you want to import into Lytics (up to 10 at a time). The total number of Experiences you can bring into Lytics is only limited by the amount in your connected provider. However, to have meaningful and accurate reporting, it's recommended to only import Experiences that will add value to your use cases. 
+
+
+
+Completed experiences, such as an Ad Set that previously "ended", will not show on the list of importable Experiences. But if you have Ad Sets in Facebook that are saved as drafts, paused, or currently running, those will be available to import.
+
+Connect Experiences with Lytics audiences
+
+Once you start monitoring external Experiences, you can activate them by adding a Lytics audience. This lets you enrich your existing campaigns with Lytics behavioral audiences, content affinities, and delivery optimization.
+
+An example use case is to conserve Facebook ad spend by only targeting “Currently Engaged” users who have a high affinity for the content of a particular campaign. Leveraging data science under the hood, Lytics audiences can bring immediate value to your existing marketing campaigns.
+
+If you have already imported an external Experience, you can activate it from the Experience summary view by clicking 
+Edit
+ in the top right.
+
+
+
+If you want to activate an Experience that you haven't imported yet, follow the single import steps below, which will guide you through the Experience editor.
+
+Activate Experiences via single import
+
+To activate an Experience that you haven't imported yet, you will follow the workflow of creating a new Experience in Lytics. From the Experiences list view, click 
+Add Experiences
+ > 
+New
+.
+
+
+
+Select your chosen provider and then 
+Import
+ the campaign, ad set, or journey. This example will continue with importing a SendGrid campaign.
+
+
+
+Next you will select an Authorization for your chosen provider as described above.
+
+
+
+Then you will select the campaign or ad set to import. Note that here you can only import one Experience at a time. Click 
+Import 1 Experience
+ to continue.
+
+
+
+Complete the Experience Editor steps
+
+Finally, you will complete the following Experience Editor steps:
+
+Upon completion, your Experience will be ready to publish. 
+
+
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/identity ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Merge Statistics
+
+When data from multiple sources are combined into a single user profile, it is essential to ensure that the resulting data is accurate and consistent. Merge statistics in Lytics provide a way to monitor and optimize the merging process, ensuring that the data is adequately combined and reflects the most up-to-date and accurate information.
+
+In the example below, you can see how merge stats can be used to uncover potential areas of issue. Out of the four available identifiers, user_id, is not responsible for any merges. This could be due to several reasons, such as no data populating that field, the relationship being defined inaccurately, etc. 
+
+
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/client-server-side-cookie-deep-dive ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Client & Server Side Cookies
+
+Everything you wanted to know about cookies from client side to server side.
+
+What is a Cookie
+
+An HTTP cookie (web cookie, browser cookie) is a small piece of data that a server sends to a user's web browser. The browser may store the cookie and send it back to the same server with later requests. Typically, an HTTP cookie is used to tell if two requests come from the same browser—keeping a user logged in, for example. It remembers stateful information for the 
+stateless
+ HTTP protocol.
+
+Cookie Flavors
+
+First-party
+
+First-party cookies are created by the host domain – the domain the user is visiting. These cookies are generally considered good; they help provide a better user experience and keep the session open. This means the browser can remember key information, such as items you add to shopping carts, username, and language preferences.
+
+Third-party
+
+Third-party cookies are those created by domains other than the one the user is visiting at the time and are mainly used for tracking and online-advertising purposes. They also allow website owners to provide certain services, such as live chats.
+
+Common Cookie Use Cases
+
+Session management
+
+Logins, shopping carts, game scores, or anything else the server should remember.
+
+Personalization
+
+User preferences, themes, and other settings.
+
+Tracking
+
+Recording and analyzing user behavior.
+
+How does Lytics use cookies?
+
+Cookies are one of the preferred methods for maintaining a user identifier in the browser, both known and anonymous. This gets associated with all inbound events captured by our Javascript tag as they interact with customer websites. Specifically, our Javascript tag stores a string of digits and characters that are used as a unique ID commonly referred to as our 
+_uid
+ or, in some cases 
+seerid
+ as a first-party cookie.
+
+Creating & Managing Cookies
+
+Where do cookies come from?
+
+In web development, the client-side refers to everything in a web application displayed on the client (end-user device). This includes what the user sees, such as text, images, and the rest of the UI, along with any actions an application performs within the user's browser.
+
+When someone refers to a “client-side cookie,” they are generally referring to a cookie that is created and/or managed via a common client-side programming language such as Javascript.
+
+Like with client-side, server-side means everything that happens on the server instead of on the client. In the past, nearly all business logic ran on the server-side, including rendering dynamic webpages, interacting with databases, identity authentication, and push notifications.
+
+When someone refers to a “server-side cookie,” they are generally referring to a cookie that is created and managed using one of the many common server-side programming languages such as NodeJS, PHP, Python, etc.
+
+Cookie Ingredients
+
+Defines the cookie name. Generally, the cookie name is the primary way of retrieving a cookie and its associated value and attributes.
+
+The stored value for the cookie. This can include any US-ASCII character excluding a control character, whitespace, double quotes, comma, semicolon, and backslash.
+
+Indicates the maximum lifetime of the cookie as an HTTP-date timestamp. See 
+Date
+ for the required formatting.
+
+Indicates the number of seconds until the cookie expires. A zero or negative number will expire the cookie immediately.
+
+Defines the host to which the cookie will be sent.
+
+Indicates the path that must exist in the requested URL for the browser to send the 
+Cookie
+ header.
+
+This indicates that the cookie is sent to the server only when a request is made with the 
+HTTPS:
+ scheme (except on localhost) and, therefore, is more resistant to 
+man-in-the-middle attacks
+. 
+
+Forbids JavaScript from accessing the cookie, for example, through the 
+Document.cookie
+ property. Note that a cookie created with 
+HttpOnly
+ will still be sent with JavaScript-initiated requests, for example, when calling 
+XMLHttpRequest.send()
+ or 
+fetch()
+. This mitigates attacks against cross-site scripting (
+XSS
+).
+
+Controls whether or not a cookie is sent with cross-origin requests, providing some protection against cross-site request forgery attacks (
+CSRF
+).
+
+Who’s taking away my cookies?!?
+
+In June 2017, Apple introduced a new privacy feature called 
+Intelligent Tracking Prevention (ITP)
+. This same feature was officially released in September 2017 with Safari 12 and iOS 11. Since then, the ITP has evolved and introduced several subsequent versions leading us to the current state (as of July 2022), which has many impacts on marketing but most notably:
+
+As a result of the privacy and security efforts in general other browsers such as Mozilla’s Firefox(ETP) and Google Chrome have followed suit in announcing and/or implementing their security and tracking protocols, which continue to impact tools such as third and first-party cookies that have long been a staple in providing the data necessary for marketers to personalize their communications effectively.
+
+What can I do to replace my cookies?
+
+With each iteration on more stringent privacy-related changes comes a wave of workarounds or alternate approaches to maintaining access to behavioral data essential to marketing:
+
+1. Deploy a strong first-party identification strategy.
+
+There is no replacement then a strong identification strategy. Creating a relationship in which a user will openly share their identity through a login or some other authenticated means will always result in the highest level of certainty on identity, which leads to the best level of personalization. However, many use cases focus on anonymous users or users who have not built up the relationship necessary to unlock this level of authentication. 
+
+2. First-party client-side cookies have changed but are still a viable solution.
+
+Though third-party cookies are effectively dead, first-party cookies are still viable for many use cases. Not only do they offer a very simple off-the-shelf type of implementation for leveraging, they also have a long shelf life, assuming that an anonymous user interacts frequently enough to overcome the 7-day expiration window. 
+
+3. First-party server-side cookies offer an extended expiration window.
+
+Over the past 12 months, there has been a surge of interest in server-side cookies. This method for setting cookies currently is not affected by the ITP changes that impact client-side cookies, most notably the automatic expiration at seven days. Rather, server-side cookies can live for long periods, leading to a higher quality identification for anonymous users. The downside, however, is they are far more difficult to leverage than the client-side. They require a much more technical integration with whatever server-side technology is used to power the web asset and may not be accessible in the same manner as client-side cookies.
+
+Getting Technical with Server Side Cookies
+
+In general, regardless of the specific attribute settings used when leveraging server-side cookies, they currently are not impacted by the 7-day expiration window that client-side cookies fall victim to. However, Apple has made it clear that they have additional plans to extend some of the client-side cookie limitations to the server-side, and the most important attribute in that discussion is the 
+HttpOnly
+ attribute.
+
+
+
+https://webkit.org/blog/9521/intelligent-tracking-prevention-2-3/
+
+As a CDP and technology leader, we always aim to help our customers future-proof their implementations. As such, even though a non-HttpOnly server-side cookie offers an easier means to bypass current client-side restrictions, it is our recommendation to consider investing to leverage 
+HttpOnly
+ cookies set by the server-side to prevent any potential impacts of the next few iterations of ITP. Below we’ll explore the two options and demonstrate the key differences.
+
+Server Side Cookie without HttpOnly
+
+The following example in Node.js demonstrates a sample snippet for setting the cookie server side. Most server-side languages have existing methods to make this very easy. In the case of creating a cookie for Lytics to leverage, you will also need to generate a unique ID which can be done in a variety of ways. In the case of Node, you may consider using the 
+randomUUID() method of the Crypto interface
+. A simple Google search can lead you or your developer down the road of generating a unique ID that best fits your use case.
+
+Once you have that unique ID, you simply set the cookie using the pre-defined Lytics name our Javascript tag is looking for. Alternatively, the tag can be configured to use any custom name.
+
+// THE FOLLOWING REPRESENTS A UNTESTED AND NON-PRODUCTION LEVEL
+// EXAMPLE OF HOW TO SET A COOKIE SERVER SIDE WITH NODE.JS AND
+// ACCESS THE DOCUMENT.COOKIES FROM THE CLIENT SIDE
+
+var express = require('express');
+var app = express();
+var cookieParser = require('cookie-parser');
+var crypto = require('crypto');
+var dayjs = require('dayjs');
+
+// cookieParser middleware
+app.use(cookieParser());
+
+// route for setting the cookies
+app.get('/setcookie', function (req, res) {
+  // setting a server side cookie without httponly
+  res.cookie("seerid", crypto.randomUUID(), {
+    httpOnly: false,
+    expires: dayjs().add(30, "days").toDate(),
+  });
+
+  res.send(`<html><body><p>A server side cookie has been set.</p></body></html>`);
+})
+
+// Route for getting all the cookies
+app.get('/getcookie', function (req, res) {
+    res.send(`
+        <html>
+            <head>
+                <script>
+                    alert(document.cookie);
+                </script>
+            </head>
+            <body>
+                <p>This is an example of how to get the cookies client side.</p>
+            </body>
+        </html>`
+    );
+})
+
+app.listen(3000, (err) => {
+    if (err) throw err;
+    console.log('server running on port 3000');
+});
+
+
+Since non-HttpOnly cookies are accessible out of the box client-side there is no additional lift necessary. Our tag will pick up the cookie and use that ID as the identifier. It is important to note that any UID changes must also be managed server-side as setting the cookie client-side will engage the 7-day expiration max. In this example, we simply raise an alert with the cookie string and do not show the actual implementation of the Lytics tag.
+
+Server Side Cookie with HttpOnly
+
+Setting HttpOnly to true comes with an additional level of complexity but benefits from following the stringent and recommended guidelines of Apple ITP, which in theory will go farther in the way of future-proofing.
+
+Much like the above example, we’ll set a cookie, in this case using Node, in the same way. The only difference here is setting 
+httpOnly
+ to true. This means that the cookie is secure but will no longer be accessible out of the box by Javascript. Rather, you’ll have to implement an alternative method for surfacing that ID to Javascript so that it can be passed to the Lytics Javascript tag and used during collection/resolution. 
+
+// THE FOLLOWING REPRESENTS A UNTESTED AND NON-PRODUCTION LEVEL
+// EXAMPLE OF HOW TO SET A COOKIE SERVER SIDE WITH NODE.JS AND
+// ACCESS THE DOCUMENT.COOKIES FROM THE CLIENT SIDE WHEN USING HTTPONLY
+
+var express = require('express');
+var app = express();
+var cookieParser = require('cookie-parser');
+var crypto = require('crypto');
+var dayjs = require('dayjs');
+
+// cookieParser middleware
+app.use(cookieParser());
+
+// route for setting the cookies
+app.get('/setcookie', function (req, res) {
+  // setting a server side cookie with httponly
+  res.cookie("uuid", crypto.randomUUID(), {
+    httpOnly: true,
+    expires: dayjs().add(30, "days").toDate(),
+  });
+
+  res.send(`<html><body><p>A server side cookie has been set using httpOnly.</p></body></html>`);
+})
+
+// Route for getting all the cookies
+app.get('/getcookie', function (req, res) {
+    res.send(`
+        <html>
+            <head>
+                <script>
+                    var uuid = '${req.cookies.uuid}';
+                    alert(uuid);
+                </script>
+            </head>
+            <body>
+                <p>This is an example of how to get the cookies client side when cookie is httpOnly.</p>
+            </body>
+        </html>`
+    );
+})
+
+app.listen(3000, (err) => {
+    if (err) throw err;
+    console.log('server running on port 3000');
+});
+
+
+All code examples in this document are purely for demonstration. Any customer facing implementation should follow the guidance of our customer facing technical teams and the technical experts on our customer’s end. These examples in production represent HIGH risk as documented.
+
+Updated
+ 
+about 1 year ago
+
+=== Content from https://docs.lytics.com/docs/acoustic ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Acoustic
+
+Overview
+
+Acoustic
+ (previously known as Silverpop) is a marketing platform that enables email, SMS, and mobile campaigns, among other marketing analytics and automation solutions.
+
+Integrating Lytics with Acoustic allows you to import users and their activity data to build behavioral audiences and gain Insights in Lytics. You can then export Lytics audiences back to Acoustic to refine your targeting and deliver personalized messaging.
+
+Authorization
+
+If you have not done so already, you will need to set up an Acoustic account before you begin the process described below. Your Acoustic account user must have permission to create 
+Application Access
+ via the API.
+
+📘
+
+For this integration, it is recommended to create a new Acoustic User specific for Lytics with the option 
+Do not enforce password expiration policies for this user
+ selected so the authentication is long lasting, and can be revoked on an account by account basis.
+
+Import Audiences & Activity
+
+Import Acoustic users and their activity information into Lytics so you can leverage that data to build behavioral audiences and gain Insights powered by Lytics data science.
+
+Integration Details
+
+This integration utilizes the 
+Acoustic XML API
+ to import Acoustic users and their activity to Lytics. Each run of the job will proceed as follows:
+
+Fields
+
+The following fields are included in the default mapping for the 
+silverpop_users
+ stream. Note this integration was formerly named Silverpop, hence the data stream name, but this job will receive your current Acoustic data.
+
+Similarly, the following fields are included in the default mapping for the 
+silverpop_activity
+ stream:
+
+Configuration
+
+Follow these steps to set up an Import Audiences and Activity Data job for Acoustic. 
+
+Export Audiences
+
+Send Lytics user profiles and audience membership to your Acoustic Database to refine your targeting and deliver personalized messaging across channels. All existing users and new users of the selected Lytics audiences are exported.
+
+Integration Details
+
+This integration utilizes the Acoustic 
+Import List API
+ to export user data from Lytics to the Acoustic Database. Once the export is started, the job:
+
+Fields
+
+You can export any Lytics user fields to Acoustic Database columns that are present in the selected Acoustic Database. Lytics allows you to map user fields with the corresponding Acoustic Database columns as part of the job configuration described below.
+
+To export using the Acoustic Recipient ID as the sync field use the 
+Acoustic Export Audience with Recipient ID export
+.
+
+Configuration
+
+Follow these steps to set up an Export Audiences job for Acoustic. 
+
+Export Audiences with Recipient ID
+
+Send Lytics user profiles and audience membership to your Acoustic Database to refine your targeting and deliver personalized messaging across channels. All existing users and new users of the selected Lytics audiences are exported.
+
+📘
+
+This export is specifically used for exporting using the Acoustic Recipient ID as the sync field. It will only update users already in Acoustic with a Recipient ID. In order to add users to Acoustic or if you would like to use other sync fields use the standard 
+Acoustic Export Audience export
+.
+
+Integration Details
+
+This integration utilizes the Acoustic 
+Import List API
+ to export user data from Lytics to the Acoustic Database. Once the export is started, the job:
+
+Fields
+
+You can export any Lytics user fields to Acoustic Database columns that are present in the selected Acoustic Database. Lytics allows you to map user fields with the corresponding Acoustic Database columns as part of the job configuration described below.
+
+Configuration
+
+Follow these steps to set up an Export Audiences job for Acoustic. 
+
+Export Audiences to Relational Tables
+
+Send Lytics user profile data and audience membership to your Acoustic Relational tables.  All existing and new users of the selected audience are exported in real-time.
+
+Integration Details
+
+This integration utilizes the Acoustic 
+Relational Table Management api
+ to export user data from Lytics to the Acoustic Relational Table. Once the export is started, the job:
+
+Fields
+
+You can export any Lytics user fields to Acoustic Relational Table. Lytics allows you to map user fields with the corresponding table columns as part of job configuration. The job also has option to create column in Acoustic table for Lytics user field.
+
+Configuration
+
+Follow these steps to set up an Export Audiences job for Acoustic. 
+
+Example
+
+Below is an example of a user exported and how they may look in Acoustic.
+
+Sample User
+{
+  "email": "
+[email protected]
+",
+  "first_name": "James",
+  "last_name": "McDermott",
+  "channels": [ "web", "email" ],
+  "hourly": {
+    "17": 1,
+    "21": 1,
+    "23": 2
+  },
+  "segments": {
+    "all",
+    "highly_engaged"
+  }
+}
+
+
+User Table
+: lytics_user_table_20240408220715
+
+ Audience Table
+: lytics_audiences_table_20240408220715
+
+ Non-scalar table for channels
+: lytics_channels_table_20240408220715
+
+ Non-scalar table for hourly
+: lytics_hourly_table_20240408220715
+
+Updated
+ 
+30 days ago
+
+=== Content from https://docs.lytics.com/docs/creating-cloud-connect-audiences ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Data Models & Queries
+
+Cloud Connect Data Models
+
+A Data Model is used by Cloud Connect to link or "connect" a user's external data warehouse to Lytics profiles. Each Data Model represents a set of records defined by a SQL query. Each Data Model will also configure a join key which defines how the Data Model is joined to Lytics Profiles. 
+
+Once a Connection to your data warehouse has been created, Data Models can be created via the  
+Data Models
+ tab within the navigation bar: 
+
+Creating a Data Model
+
+Click 
++ Create New 
+ from the Data Models dashboard and complete the following steps.
+
+Select the Connection.
+
+Write the SQL query.
+
+
+
+
+
+
+
+
+Query Editor
+: Write and test standard SQL queries directly in Lytics. Alternatively, copy and paste queries you've tested in your BigQuery or Snowflake instance. When you click 
+Test Query
+, Lytics will return 10 sample records.
+
+Test the query and validate the results.
+
+
+
+📘
+
+When building multiple Cloud Connect Data Models with the same primary key, you must select the same External Lytics Key mapping. Selecting a different Lytics key will result in an error when you try to save the new Data Model.
+
+Example Use Case
+
+Consider this scenario to demonstrate why you'd want to create a Cloud Connect Data Model driven audience instead of a standard Lytics audience. Your company sells e-bikes and wants to run a holiday campaign that sends a promotion to any customer who purchased an e-bike in November or December last year. Perhaps you also want to refine your audience to those who are interested in particular bike brands. All of this purchase and product data already exists in your Google BigQuery instance (as shown below).
+
+
+
+Instead of directly importing all that purchase history data into Lytics, you can write a SQL query to find which customers meet this audience criteria. By copying this query directly into the Lytics Model Builder (as shown in the generate a query screenshot above), you'll create a new audience in Lytics that will be updated on the frequency interval you decide.
+
+Once the Data Model is activated, profiles will be updated with a membership field that can be used to create an audience. Activated fields can be added to the Data Model that can then be used for more dynamic audiences.
+
+SQL Translator
+
+If you would like to skip having to write a SQL query, simply describe the Data Model of what you wish to fetch and using GenAI, Lytics will translate the description to a SQL query for you. Lytics makes queries to your database to ensure that the data is up to date and accurate when creating the query.
+
+Updated
+ 
+2 months ago
+
+=== Content from https://docs.lytics.com/docs/monitoring-and-alerts ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Monitoring Metrics and Alerts
+
+How to monitor Lytics, and alert when help is needed.
+
+Monitoring
+
+Monitoring and alerting is available on every job and every authorization within Lytics.
+
+To set up alerting on your jobs or authorizations, you can set up a monitoring job from either the Job API or the Lytics UI for alerting to 
+Slack
+, 
+Microsoft Teams
+, or directly to 
+email
+.
+
+If a source or destination job has failed, Lytics will show the latest error message on the Conductor Diagnostics Dashboard and on the Logs tab of the Source/Destination Job Summary interface, and allow the job to be restarted if needed. The most detailed information for troubleshooting can be accessed from the 
+Job Logs API
+
+Additional generic monitoring on the Lytics system is available on our status page at 
+lytics.statuspage.io
+.
+
+Updated
+ 
+12 months ago
+
+=== Content from https://docs.lytics.com/docs/schema-management ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Schema Management
+
+Welcome to the Schema Management section, where we will explore how to define and manage data structures within the Lytics platform. This section will cover how to ensure data quality and consistency, including defining data types, creating custom fields, and enforcing validation rules. Whether you are a data analyst, developer, or system administrator, this section will provide you with the essential knowledge needed to understand schema management within the context of the Lytics platform.
+
+Updated
+ 
+almost 2 years ago
+
+=== Content from https://docs.lytics.com/docs/identity-resolution ===
+
+Quick Start
+
+Account Management
+
+Key Concepts
+
+Pipeline & Profiles
+
+Warehouse Access
+
+Audiences & Activation
+
+Tutorials
+
+SDKs & Tools
+
+Integrations
+
+Partners
+
+Legacy
+
+Identity Resolution
+
+Introduction
+
+Identity Resolution is a crucial component of customer communication. Establishing and maintaining a well-defined identity resolution strategy is essential, but it can be overwhelming to get started. Several challenges may arise, such as limited and outdated customer data, data silos, technical difficulties, in-flexibility, consistency, compliance, and maintenance.
+
+Lytics offers a solution that powers brands' identity resolution strategies by aggregating data from disparate sources, defining a standardized customer schema, unifying disparate sources, surfacing individual consumer profiles, enabling better understanding, segmentation, and activation across channel tools, ensuring control, visibility, flexibility, security, privacy, and compliance, and maximizing match rates and accuracy across activation channels.
+
+The goal is to construct complex consumer profiles and maintain accurate and compliant user profiles as your brand evolves. Defining the relationship between consumer identifiers is a necessary first step in surfacing unified user profiles that enable your brand to create the best consumer engagements while meeting evolving compliance requirements. To achieve this, we've broken our approach into three components:
+
+
+
+Our Approach
+
+Define: Relationships Between Identifiers
+
+
+
+Profile definition is the first step in surfacing unified user profiles that enable your brand to create the best consumer engagements while meeting evolving compliance requirements. 
+
+To build a strong identity resolution strategy, three key questions must be answered:
+
+Construct: Complex Profiles
+
+
+
+Data is messy. Lytics' Profile Materialization provides a necessary cleansing & polishing layer atop the defined resolution strategy. This ensures what is surfaced is accurate and accessible and enables your team to accelerate impact.
+
+Answering the following two key questions guarantee profiles represent the ideal marketable entity:
+
+Maintain: Accurate & Compliant Profiles
+
+
+
+Over time profiles will bloat, attributes will become stale, and use cases become more complex. If unmanaged, a quality identity strategy will begin breaking down the moment it is implemented. 
+
+Lytics prevents your identity strategy from breakdown through a set of powerful tools focused on ensuring the following profile health-related questions have concrete answers:
+
+Advanced Concepts
+
+The Lytics Identity Graph
+
+Behind each Lytics profile is an identity graph.  This graph represents connections between pieces of data observed across multiple sources or even within a single source.
+
+To create (or update) profiles from a data stream, the stream must contain one or more 
+identity keys
+ that identify distinct users with which to associate the data.  When data is observed for a given identity key, it stores the relevant profile metadata in an object called an 
+identity fragment
+.  When there's evidence on a data stream  that two keys or fragments should be connected
+
+When evidence on a data stream shows that two keys or fragments identify the same real-world entity, those fragments become connected in the same identity graph.  Some identity graphs are significant and represent complex relationships in the data. In contrast, other identity graphs are small and describe a small interaction, like an anonymous cookie from a single-visit, incognito browser.
+
+
+
+Graph Mechanics
+
+As you learned from the identity resolution overview, a profile comprises one or more identity fragments.  Many profiles start as singletons – new data is observed on a data stream. That event's identifier keys create any necessary identity fragments and store the event's associated data on that fragment.
+
+However, we're not satisfied with several singletons – our objective is to stitch data sources together by linking the appropriate underlying fragments.  Stitching occurs when we observe two identifiers in a single event.  A common stitching event is a newsletter signup, where the email address from the newsletter form is linked to the cookie from their web activity and creates a link between activity from the browser on the device and any activity associated with the email address, which could eventually encompass purchases, support tickets, CRM data, etc.
+
+In graph terms, stitching creates an edge between two nodes representing two identity fragments.  If we wanted to retrieve a profile associated with an email address, we would retrieve all of the fragments with edges or connections to other fragments.  From there, we'd want to find all of the connections to those other fragments, and so on, until there are no more connections to follow.  Following one fragment to another is called 
+traversal
+.  The full set of fragments that are found to have connections to the initial fragment are called 
+neighbors
+.
+
+In Lytics, default graph limits cap the number of traversals allowed for an individual profile at 50 and cap the number of neighbors allowed at 50.  Changing these values can create different sets of user profiles over the same data set and should not be adjusted lightly.  To change these values for your data, please contact 
+Lytics support
+.
+
+Identity Keys
+
+As we traverse identity graphs, we'll quickly find that identity fragments and their corresponding identity keys are not all created equal. An identifier's strength must contribute proportionally to its influence on identity resolution.
+
+For example, you have email addresses and cookies as identity keys.  Generally, a user identified with an email address can have multiple cookie values (from different devices, browsers, periods, etc.).  Imagine hosting a promotional, in-person event and having multiple tablets collecting participants' email addresses.  Depending on how those email addresses are collected (most likely through an online form), you'll likely have one cookie associated with 
+many
+ email addresses.
+
+
+
+Field Types
+
+Field types for Identity Keys can be either a string or a string set.  String sets are a common field type for cookies since one profile is expected to have many cookie values over time.  Email addresses are not so cut-and-dry.  Some organizations will constrain profiles to have one email address, while others will allow profiles to have multiple (personal, work, etc.).  In our example of email collection via physical tablet, if the email address is a single-valued string type, we won't end up with an over-merged hairball.
+
+Using an identity key that allows for a set of values is usually a good idea to have a sensical capacity cap on the field type.  A set of cookies, for example, might have a capacity limit of 50 values.  On the other hand, a set of emails might have a capacity limit of 5 values.
+
+Identity Key Rankings
+
+The ranking of your identity keys should reflect their reliability and their relative importance in the strategy.  In the event of a conflict in stitching and merging, higher-ranked identity keys will win.  Typically, most Lytics users configure email identifiers to be ranked higher than cookie identifiers.
+
+Imagine a scenario where email A is connected to cookies X and Y, while email B is connected to cookie Z.  If new data is observed that connects email B with cookie Y, we have a 
+conflict
+, meaning that a resulting stitching between the two fragments would yield a profile with two 
+different
+ email fragments and violates our merge rules.
+
+The ranks of identity keys would dictate that, for the new event, the email address it contains is of a higher priority than the cookie value that it contains and would consequently update the profile for Email A and 
+not
+ the profile for Email B.
+
+Graph Compaction
+
+We mentioned that a critical tenet of bulletproof identity resolution is that profile complexity remains stable over time.  That is, we need a way to ensure that a relatively greedy algorithm doesn't result in profiles becoming more fragile and susceptible to conflicts.
+
+In Lytics, that is accomplished via graph compaction, a process by which data from multiple fragments is combined into a single fragment.  Doing so allows well-established relationships in the graph to be solidified while making room for new relationships within the profile.  It functions more as a type of profile housekeeping to keep profile fragments tidy.
+
+Compaction in identity graphs can take on a few forms.
+
+Rank-based Compaction
+
+Let's go back to our example with Email A and Email B.  The point of identity resolution within a customer data platform is to enable long and rich relationships with customers.  The longer that Email A and Email B represent profiles in the platform, the more cookies with which they'll eventually become connected.  Each identity key's ranking allows an identity graph to compact by size or time.
+
+Updated
+ 
+over 1 year ago
+

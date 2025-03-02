@@ -1,0 +1,295 @@
+=== Content from https://www.vidora.com/docs/?top-category=using-cortex ===
+
+Vidora is now mParticle Predictions.
+
+Cortex Support
+
+ Documentation
+
+Overview
+
+Getting Started
+
+Using Cortex
+
+Developer Docs
+
+ About Cortex
+
+ Predict Future Behavior
+
+ Predict Attributes
+
+ Recommendations Use Cases
+
+ Uplift Modeling Use Cases
+
+ Admin & Account Settings
+
+ Data Overview
+
+ Creating ML Pipelines
+
+ Analyzing ML Pipelines
+
+ Deploying ML Pipelines
+
+ API Setup
+
+ Data Ingestion APIs
+
+ Deployment APIs
+
+ Export Integrations
+
+ Data Source Integrations
+
+ JavaScript SDK
+
+Uncover new ways to leverage your customer data.
+
+
+Learn More
+
+
+
+
+
+Learn More
+
+=== Content from https://www.vidora.com/docs/?top-category=developer-docs ===
+
+Vidora is now mParticle Predictions.
+
+Cortex Support
+
+ Documentation
+
+Overview
+
+Getting Started
+
+Using Cortex
+
+Developer Docs
+
+ About Cortex
+
+ Predict Future Behavior
+
+ Predict Attributes
+
+ Recommendations Use Cases
+
+ Uplift Modeling Use Cases
+
+ Admin & Account Settings
+
+ Data Overview
+
+ Creating ML Pipelines
+
+ Analyzing ML Pipelines
+
+ Deploying ML Pipelines
+
+ API Setup
+
+ Data Ingestion APIs
+
+ Deployment APIs
+
+ Export Integrations
+
+ Data Source Integrations
+
+ JavaScript SDK
+
+Uncover new ways to leverage your customer data.
+
+
+Learn More
+
+
+
+
+
+Learn More
+
+=== Content from https://www.vidora.com/docs/?top-category=overview ===
+
+Vidora is now mParticle Predictions.
+
+Cortex Support
+
+ Documentation
+
+Overview
+
+Getting Started
+
+Using Cortex
+
+Developer Docs
+
+ About Cortex
+
+ Predict Future Behavior
+
+ Predict Attributes
+
+ Recommendations Use Cases
+
+ Uplift Modeling Use Cases
+
+ Admin & Account Settings
+
+ Data Overview
+
+ Creating ML Pipelines
+
+ Analyzing ML Pipelines
+
+ Deploying ML Pipelines
+
+ API Setup
+
+ Data Ingestion APIs
+
+ Deployment APIs
+
+ Export Integrations
+
+ Data Source Integrations
+
+ JavaScript SDK
+
+Uncover new ways to leverage your customer data.
+
+
+Learn More
+
+
+
+
+
+Learn More
+
+=== Content from https://www.vidora.com/docs/?top-category=getting-started ===
+
+Vidora is now mParticle Predictions.
+
+Cortex Support
+
+ Documentation
+
+Overview
+
+Getting Started
+
+Using Cortex
+
+Developer Docs
+
+ About Cortex
+
+ Predict Future Behavior
+
+ Predict Attributes
+
+ Recommendations Use Cases
+
+ Uplift Modeling Use Cases
+
+ Admin & Account Settings
+
+ Data Overview
+
+ Creating ML Pipelines
+
+ Analyzing ML Pipelines
+
+ Deploying ML Pipelines
+
+ API Setup
+
+ Data Ingestion APIs
+
+ Deployment APIs
+
+ Export Integrations
+
+ Data Source Integrations
+
+ JavaScript SDK
+
+Uncover new ways to leverage your customer data.
+
+
+Learn More
+
+
+
+
+
+Learn More
+
+=== Content from https://www.vidora.com/docs/ ===
+
+Vidora is now mParticle Predictions.
+
+Cortex Support
+
+ Documentation
+
+Overview
+
+Getting Started
+
+Using Cortex
+
+Developer Docs
+
+ About Cortex
+
+ Predict Future Behavior
+
+ Predict Attributes
+
+ Recommendations Use Cases
+
+ Uplift Modeling Use Cases
+
+ Admin & Account Settings
+
+ Data Overview
+
+ Creating ML Pipelines
+
+ Analyzing ML Pipelines
+
+ Deploying ML Pipelines
+
+ API Setup
+
+ Data Ingestion APIs
+
+ Deployment APIs
+
+ Export Integrations
+
+ Data Source Integrations
+
+ JavaScript SDK
+
+Uncover new ways to leverage your customer data.
+
+
+Learn More
+
+
+
+
+
+Learn More
+
